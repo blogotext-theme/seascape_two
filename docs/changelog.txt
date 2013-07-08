@@ -1,0 +1,24 @@
+﻿/* Changelog - Thème seascape_two par kris (http://www.xoofoo.org) */
+
+1.4	- Mise à jour pour Blogotext 2.0.2.0
+	- Mise à jour jQuery 2.0.2
+
+1.3	- Mise à jour pour Blogotext 2.0.1.0
+
+1.2	- Mise à jour jQuery 2.0
+	- Mise à jour jQuery.sharrre 1.3.4
+	- Mise à jour jQuery.sooperfish 0.3
+
+1.1	- Ajout des catégories (tags) dans le menu horizontal
+
+1.0	- Travail initial basé sur le thème default-gravatar
+
+
+/* Crédits */
+- Timo van Neerden (http://lehollandaisvolant.net/blogotext/fr/)
+- css3templates(http://www.css3templates.co.uk/) pour l'idée originale du design
+- Hakim El Hattab (http://lab.hakim.se/fokus) pour le js permettant le focus sur le texte sélectionné
+- Jérémy Martin (http://www.jeremymartin.name/projects.php?project=kwicks)
+- Jurriaan Roelofs pour le plugin jQuery SooperFish
+- L'équipe du projet Modernizr
+- Julien Hany (http://www/Sharrre.com) pour son plugin jQuery Sharrre

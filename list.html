@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8" />
+	<title>{blog_nom}</title>
+	<meta name="generator" content="BlogoText" />
+	<meta name="robots" content="all" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="keywords" content="{keywords}" />
+	<meta name="author" content="{blog_auteur}" />
+	<meta name="description" content="{blog_description}" />
+	<link rel="icon" type="image/png" href="{style}/images/favicon.png" />
+	<link rel="apple-touch-icon" href="{style}/images/apple-touch-icon.png">
+	<link rel="canonical" href="{racine_du_site}" />
+	<link rel="image_src" href="{style}/images/yofrxd.gif" />
+	<meta itemprop="name" content="{article_titre}" />
+	<meta itemprop="description" content="{article_chapo}" />
+	<meta itemprop="image" content="{style}/images/yofrxd.gif">
+	<meta property="og:title" content="{blog_nom}" />
+	<meta property="og:url" content="{racine_du_site}" />
+	<meta property="og:description" content="{blog_description}" />
+	<meta property="og:site_name" content="{blog_nom}" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:image" content="{style}/images/yofrxd.gif" />
+	<link type="text/css" rel="stylesheet" href="{style}/style.css" />
+	<link type="application/rss+xml" rel="alternate" title="RSS 2.0 - Articles" href="{rss}" />
+	<script type="text/javascript" src="{style}/js/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+	<div id="main">
+		<header>
+			<div><a id="top-link" href="#top" title="Haut de page"></a></div>
+			<div id="top">
+				<div id="top_text">
+					<h1><a class="top_colour" href="{racine_du_site}" title="{blog_nom}">{blog_nom}</a></h1>
+					<h2>{blog_description}</h2>
+				</div>
+				<p id="slide"><a href="javascript:XoShowDiv('marcello');" class="btn-slide"></a></p>
+			</div>
+			<nav>
+				<ul class="sf-menu" id="nav">
+					<li><a href="index.php" title="Accueil">Accueil</a></li>
+					<li><a href="#">Catégories</a>{categories_encart}</li>
+					<li><a href="index.php?mode=links" title="Liens">Liens</a></li>
+					<li><a href="index.php?mode=comments" title="Derniers commentaires">Derniers commentaires</a></li>
+					<li><a href="?random" title="Article au hasard ?">Article au hasard ?</a></li>
+				</ul>
+			</nav>
+			</header>
+			<div id="site_slide">
+				<ul id="images">
+					<li><img src="{style}/images/1.jpg" width="600" height="300" alt="seascape_one" /></li>
+					<li><img src="{style}/images/2.jpg" width="600" height="300" alt="seascape_two" /></li>
+					<li><img src="{style}/images/3.jpg" width="600" height="300" alt="seascape_three" /></li>
+					<li><img src="{style}/images/4.jpg" width="600" height="300" alt="seascape_four" /></li>
+					<li><img src="{style}/images/5.jpg" width="600" height="300" alt="seascape_five" /></li>
+					<li><img src="{style}/images/6.jpg" width="600" height="300" alt="seascape_seascape" /></li>
+				</ul>
+			</div>
+			<div id="wrapper">
+				<section id="sidebar">
+					<nav id="navigate">
+						<h3>Rechercher</h3>
+						{recherche}
+						{calendrier}
+					</nav>
+					<nav id="last_comments">
+						<h3>Derniers commentaires</h3>
+						{commentaires_encart}
+					</nav>
+					<nav id="tags">
+						<h3>Tags</h3>
+						{categories_encart}
+					</nav>
+					<nav id="liens">
+						<h3>Autres</h3>
+						<ul>
+							<li><a href="index.php" title="Blog">Blog</a></li>
+							<li><a href="index.php?mode=links" title="Liens">Liens</a></li>
+							<li><a href="index.php?mode=comments" title="Derniers commentaires">Derniers commentaires</a></li>
+						</ul>
+					</nav>
+					<!--nav id="random">
+						<h3>Un article au hasard</h3>
+							<ul>
+								<li><a href="?random">Un article au hasard ?</a></li>
+							</ul>
+					</nav-->
+					<nav id="feed">
+						<h3>Fils RSS</h3>
+						<p><a class="rss1" href="rss.php" rel="external" title="RSS Blog">RSS : Blog</a><br /><a class="rss1" href="rss.php?full" rel="external" title="RSS Blog Articles" > RSS : Blog (articles complets)</a></p>
+					</nav>
+					<nav id="share">
+						<h3>Partager</h3>
+						<div id="shareme" data-url="{racine_du_site}" data-text="{blog_nom} - {blog_description}" data-title="Partager ce site"></div>
+					</nav>
+				</section>
+				<section id="contenu">
+					{BOUCLE_posts}
+					{/BOUCLE_posts}
+				</section>
+				<br style="clear:both;" />
+				{pagination}
+			</div> <!-- einde #wrapper -->
+		<footer>
+			<p>Copyright &copy; <a rel="external" href="http://about.me/{blog_auteur}" title="Au sujet de l'auteur">{blog_auteur}</a> – Publié avec <a href="http://lehollandaisvolant.net/blogotext/" rel="external" title="Le Hollandais Volant">{app_name}</a> – Thème basé sur <a href="http://www.css3templates.co.uk" rel="external" title="css3templates.co.uk">CSS3_seascape_two</a></p>
+			<div id="social-box">
+				<span class="facebook"><a href="https://www.facebook.com/pages/#" title="Page Facebook" rel="external"></a></span><span class="twitter"><a href="https://twitter.com/{blog_auteur}" title="Nous suivre sur Twitter" rel="external"></a></span><span class="rss"><a href="rss.php" title="RSS Blog" rel="external"></a></span>
+			</div>
+		</footer>
+	</div>
+	<p>&nbsp;</p>
+	<div id="marcello" class="xo-hideshow" style="visibility:hidden;">
+		<div id="xo-fade"></div>
+		<div class="xo-popup_block">
+			<div class="xo-popup">
+				<a class="cntrl" href="javascript:XoHideDiv('marcello');" title="Fermer la fenêtre"></a>	
+				<h3>Vous voulez être informé(e) des nouveaux articles & actualités du site !</h3>
+				<p>Merci de nous montrer votre soutien en vous abonnant, et nous allons essayer de ne pas vous décevoir ...</p>
+				<div id="xo-popup-twitter">
+					<a href="https://twitter.com/{blog_auteur}" title="Nous suivre sur Twitter" rel="external"><img src="{style}/images/twitter1.png" alt="Twitter"/></a>
+					<h4>Nous suivre sur Twitter</h4>
+				</div>
+				<div id="xo-popup-googleplus">
+					<a href="https://plus.google.com/#" title="Nous ajouter dans vos cercles Google +" rel="external"><img src="{style}/images/googleplus1.png" alt="Google+" /></a>
+					<h4>Ajouter à votre cercle</h4>
+				</div>
+				<div id="xo-popup-facebook">
+					<a href="https://www.facebook.com/pages/#" title="Apprécier notre page Facebook" rel="external"><img src="{style}/images/facebook1.png" alt="Facebook" /></a>
+					<h4>Apprécier notre page</h4>
+				</div>
+				<h1>Merci pour cela !</h1>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="{style}/js/jquery.js"></script>
+<script type="text/javascript" src="{style}/js/monjsamoi.js"></script>
+<script type="text/javascript" src="{style}/js/jquery.easing-sooper.js"></script>
+<script type="text/javascript" src="{style}/js/jquery.sooperfish.min.js"></script>
+<script type="text/javascript" src="{style}/js/fokus.min.js" async></script>
+<script type="text/javascript" src="{style}/js/jquery.kwicks.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	  $('#images').kwicks({
+		max : 600,
+		spacing : 2
+	  });
+	  $('ul.sf-menu').sooperfish();
+	});
+</script>
+<script type="text/javascript" src="{style}/js/jquery.sharrre.min.js"></script>
+<script type="text/javascript">
+	$('#shareme').sharrre({
+	  share: {
+		googlePlus: true,
+		facebook: true,
+		twitter: true,
+		digg: false,
+		delicious: true
+	  },
+	  enableTracking: true,
+	  buttons: {
+		googlePlus: {size: 'tall'},
+		facebook: {layout: 'box_count'},
+		twitter: {count: 'vertical'},
+		digg: {type: 'DiggMedium'},
+		delicious: {size: 'tall'}
+	  },
+	  hover: function(api, options){
+		$(api.element).find('.buttons').show();
+	  },
+	  hide: function(api, options){
+		$(api.element).find('.buttons').hide();
+	  }
+	});
+</script>
+</body>
+</html>
